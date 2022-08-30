@@ -77,7 +77,7 @@ Flutter Tech Assessment
 3. Flutter Part
 	+ Above mentioned structure designed & start developing
 	+ Coming Data for Account list as json convert to account_model objects
-	+ Provider package used for this lists
+	+ Flutter_Bloc package used for this lists
 
 	+ Category variables stored in a list which fetched from this account list (uniquely stored/avoid from duplication) [_stateFilterList]
 	+ This async action created for network get & post request/response time. This actions stored in state listening this data changes [AccountState]
@@ -127,7 +127,7 @@ Flutter Tech Assessment
 	+ Android
 	+ IOS (Apple) included
 
-[Drive link is public](https://drive.google.com/file/d/1SHZI0dFLi5KAtdSQAFUZX1ViUwe4EoMP/view?usp=sharing)
+[Drive link is public](https://drive.google.com/drive/folders/17zAcU2l4NOisTMsUr3MXv4faeitfI0XC?usp=sharing)
 
 
 2. Test Results
@@ -136,10 +136,18 @@ Flutter Tech Assessment
 
 
 
+https://user-images.githubusercontent.com/48150826/187525870-f5391f40-8edb-4a1d-bb2a-724b0cfb6197.mov
+
+
+
 
 
 	+ Widget Test
 
+
+
+
+https://user-images.githubusercontent.com/48150826/187527190-a10bc01c-c240-4650-90b6-a43a55640310.mov
 
 
 
