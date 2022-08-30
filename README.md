@@ -5,7 +5,7 @@ Flutter Tech Assessment
 
 1. Flutter SDK
 2. Docker
-3. Microsoft Dynamics 365
+3. Open Api (https://api.publicapis.org/entries)
 
 ## Platforms that app can works;
 
@@ -18,10 +18,11 @@ Flutter Tech Assessment
 1. [Android Test Link ](https://play.google.com/store/apps/details?id=com.digitalpratix.techassignment)
 2. [Apple (IOS) TestFlight Link](https://testflight.apple.com/join/7VCuLqf3)
 3. [Web Link (Not available now)](https://www.google.com)
+4. [Android Apk Download](https://drive.google.com/file/d/1qFDoNZXSQUJVqMIR_JhT62biHAnCTvIc/view?usp=sharing)
 
 ## Project Functions
 
-1. Microsoft Dynamics 365 Cloud Data fetch
+1. Open Api Data fetch
 2. Main Page
 
 * List of All Accounts
@@ -36,11 +37,12 @@ Flutter Tech Assessment
 
 ## Packages Used in this Project Coding
 
-1. provider: ^6.0.3 (State Management)
-2. http: any (REST API Calls)
+1. flutter_bloc: ^8.0.1 (State Management)
+2. dio: ^4.0.6 (REST API Calls)
 3. nb_utils: ^4.4.6 (Additional Needs for UI/Data)
 4. flutter_vector_icons: ^1.0.0 (Icon Usage esp. for Feather)
 5. intl: any (Format Change)
+6. lottie: ^1.1.0 (Animations)
 
 ## Packages Used in This Project Testing
 
@@ -53,15 +55,15 @@ Flutter Tech Assessment
 
 1. Blocs --> Change Notifiers
 	+ account_bloc
-	+ theme_bloc
+	
 2. Models --> Object Models
 	+ account_model
-	+ theme_model
+	
 3. Screens
 	+ account_screen (and its components)
 	+ account_detail_screen (and its components)
-4. Services
-	+ account_service
+4. Features
+	+ account_cubit
 
 5. Utilities
 	+ constants
@@ -69,23 +71,19 @@ Flutter Tech Assessment
 ## Explanation
 
 1. Get Ready Data Environments
-	+ After adjust the Environment on powerplatform
-	+ Connect Power Apps
-	+ Login Azure Portal and adjust credentials
+	+ Find an Open api which gives a list of data
 2. Data Fetch
-	+ Create an endpoint (for this purpose) for getting access token
-	+ Create for Account list fetch endpoint
 	+ Test these via POSTMAN
 3. Flutter Part
 	+ Above mentioned structure designed & start developing
 	+ Coming Data for Account list as json convert to account_model objects
 	+ Provider package used for this lists
 
-	+ State Code and StateOrProvince variables stored in a list which fetched from this account list (uniquely stored/avoid from duplication) [_stateFilterList]
-	+ This async action created for network get & post request/response time. This actions stored in bool value and state listening this data changes [_isReady]
+	+ Category variables stored in a list which fetched from this account list (uniquely stored/avoid from duplication) [_stateFilterList]
+	+ This async action created for network get & post request/response time. This actions stored in state listening this data changes [AccountState]
 	+ There is also list created for showing filtered actions _accountSearchList
 	
-	+ Service part is only used by send & get requests from REST API (account_service)
+	+ Service part is only used by send & get requests from REST API (accountCubit & accountRepository)
 
 	+ For UI actions Elements designed based on MediaQuery variables for being responsive for web & mobil (for many type  UI sizes)
 	
@@ -114,8 +112,7 @@ Flutter Tech Assessment
 		+ Checking fetched Account Card Widgets from Mock Service
 	
 	+ For Integrated Testing
-		+ Simulate the Main Screen Creation
-		+ Navigation test for specific Mock data object form Account list Page to this Account detail Page
+		+ It is still on development stage
 
 5. Docker Part
 	+ Create Dockerfile
@@ -137,20 +134,18 @@ Flutter Tech Assessment
 	+ Unit Test
 
 
-https://user-images.githubusercontent.com/48150826/182869327-42bab882-4e6b-43f7-ae7d-8259c565624a.mov
+
 
 
 
 	+ Widget Test
 
 
-https://user-images.githubusercontent.com/48150826/182868931-a646a45d-00f7-4839-aa45-e08e7af31b4b.mov
+
 
 
 	+ Integration Test
 
-
-https://user-images.githubusercontent.com/48150826/182868369-2f0e97c1-d700-49e0-8957-039469cbaf7f.mov
 
 
 
